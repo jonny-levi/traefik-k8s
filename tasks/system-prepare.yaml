@@ -8,4 +8,4 @@
     force_update: true
 
 - name: Install traefik using helm
-  ansible.builtin.shell: helm install --namepsace=traefik-v2 traefik traefik/traefik
+  ansible.builtin.shell: helm install --nameapace=traefik-v2 traefik traefik/traefik
