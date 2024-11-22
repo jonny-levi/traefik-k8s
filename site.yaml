@@ -1,0 +1,4 @@
+- hosts: k8s_masters
+  tasks:
+    - name: Installing prerequisites -
+      ansible.builtin.shell:

@@ -1,0 +1,11 @@
+- name: K8S - create traefik namespace
+  ansible.builtin.shell: kubectl create namespace traefik-v2
+
+- name: Helm - add traefik to helm
+  kubernetes.core.helm_repository:
+    name: traefik
+    repo_url: https://traefik.github.io/charts
+    force_update: true
+
+- name: Install traefik using helm
+  ansible.builtin.shell: helm install --namepsace=traefik-v2 traefik traefik/traefik
